@@ -292,7 +292,7 @@ public class Graph {
         return g;
       }
       else {
-        throw new RuntimeException("!!No problem descrioption");
+        throw new RuntimeException("!!No problem description");
       }
 
     } catch (FileNotFoundException e) {
@@ -341,7 +341,7 @@ public class Graph {
         return g;
       }
       else {
-        throw new RuntimeException("!!No problem descrioption");
+        throw new RuntimeException("!!No problem description");
       }
 
     } catch (FileNotFoundException e) {
@@ -383,8 +383,8 @@ public class Graph {
       }
       if (line.startsWith("p")) {
         String s[] = line.split(" ");
-        if (!s[1].equals("tw")) {
-          throw new RuntimeException("!!Not treewidth instance");
+        if (!s[1].equals("tw") && !s[1].equals("tdp")) {
+          throw new RuntimeException("!!Not treewidth or treedepth instance");
         }
         int n = Integer.parseInt(s[2]);
         int m = Integer.parseInt(s[3]);
