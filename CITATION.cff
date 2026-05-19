@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "bw: Single-Exponential Algorithms for Branchwidth"
+authors:
+  - family-names: Kaneda
+    given-names: Taiki
+  - family-names: Kobayashi
+    given-names: Yasuaki
+  - family-names: Tamaki
+    given-names: Hisao
+preferred-citation:
+  type: article
+  title: "Fast and Practical Single-Exponential Algorithms for Branchwidth"
+  authors:
+    - family-names: Kaneda
+      given-names: Taiki
+    - family-names: Kobayashi
+      given-names: Yasuaki
+    - family-names: Tamaki
+      given-names: Hisao
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2605.17396"
+      description: arXiv preprint
+  url: "https://arxiv.org/abs/2605.17396"
