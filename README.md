@@ -1,20 +1,29 @@
-This repository contains implementations of algorithms to compute the branchwidth of a graph described in the following paper. 
-```
-@misc{kaneda2026fastpracticalsingleexponentialalgorithms,  
-      title={Fast and Practical Single-Exponential Algorithms for Branchwidth},   
+## Citation
+
+This repository contains the algorithm implementations used in the
+experiments of the following paper. 
+The main purposes of this repository are to make the published experimental results reproducible and to make the code available for research use.  
+
+If you use this code, please cite:
+
+> T. Kaneda, Y. Kobayashi, and H. Tamaki.
+> "Fast and Practical Single-Exponential Algorithms for Branchwidth."
+> arXiv:2605.17396, 2026.
+
+BibTeX:
+
+```bibtex
+@misc{kaneda2026fastpracticalsingleexponentialalgorithms,
+      title={Fast and Practical Single-Exponential Algorithms for Branchwidth},
       author={Taiki Kaneda and Yasuaki Kobayashi and Hisao Tamaki},
-      year={2026},  
+      year={2026},
       eprint={2605.17396},
       archivePrefix={arXiv},
       primaryClass={cs.DS},
-      url={https://arxiv.org/abs/2605.17396}, 
+      url={https://arxiv.org/abs/2605.17396},
 }
 ```
 
-The main purposes of this repository are to make the published experimental results reproducible and to make the code available for research use.  
-If you use the code in this repository in your research and
-publish results from that research, 
-please cite this repository and/or the above paper.
 
 ## Building
 Requirements: JDK 22 or newer  
