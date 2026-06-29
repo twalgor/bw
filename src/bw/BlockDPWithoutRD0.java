@@ -10,8 +10,11 @@ import java.util.Set;
 
 import bw.BlockDPWithoutRD0.BlockTree.BTNode;
 import bw.BranchDec.BDNode;
+import tw.common.Chordal;
 import tw.common.Graph;
+import tw.common.TreeDecomposition;
 import tw.common.XBitSet;
+import tw.greedy.MMAF;
 import tw.minseps.MinSepsGenerator;
 import tw.sieve.SubblockSieve;
 
@@ -62,6 +65,8 @@ public class BlockDPWithoutRD0 {
     if (TRACE) {
       System.out.println("BlockDP n " + g.n + " chunk " + chunk);
     }
+    
+    g.save("debugInst.gr");
 
   }
 
@@ -1125,6 +1130,10 @@ public class BlockDPWithoutRD0 {
 
     Set<XBitSet[]> bipartitionsUpto(XBitSet s, int m) {
       Set<XBitSet[]> partitions = new HashSet<>();
+      if (s.isEmpty()) {
+        partitions.add(new XBitSet[] {new XBitSet(), new XBitSet()});
+        return partitions;
+      }
       if (s.cardinality() > 2 * m) {
         return partitions;
       }
@@ -1777,7 +1786,8 @@ public class BlockDPWithoutRD0 {
     //        test("../instance/treewidthLib/CubeGraph_6.gr",0 );//  
     //    test("../instance/treewidthLib/SquaredSkewHadamardMatrixGraph_2.gr",0 );//  
 //    test("../instance/treewidthLib/FriendshipGraph_10.gr",0 );// 
-    test("test/resources/TetrahedralGraph.gr",0 );// 
+//    test("test/resources/TetrahedralGraph.gr",0 );// 
+    test("debugInst.gr", 0);
     //
   }
 }

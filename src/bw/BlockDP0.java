@@ -1463,6 +1463,10 @@ public class BlockDP0 {
 
     Set<XBitSet[]> bipartitionsUpto(XBitSet s, int m) {
       Set<XBitSet[]> partitions = new HashSet<>();
+      if (s.isEmpty()) {
+        partitions.add(new XBitSet[] {new XBitSet(), new XBitSet()});
+        return partitions;
+      }
       if (s.cardinality() > 2 * m) {
         return partitions;
       }
