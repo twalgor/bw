@@ -25,7 +25,8 @@ public class Algorithm2 {
   
   public void decompose() {
     if (g.isStar()) {
-      width = 1;
+      // a star with one edge (K2) has branchwidth 0: its BD is a single leaf, with no mid set
+      width = g.numberOfEdges() >= 2 ? 1 : 0;
       branchDec = new BranchDec(g);
       BDNode bd = null;
       for (XBitSet e: allEdges()) {
@@ -120,9 +121,10 @@ public class Algorithm2 {
     
     long t1 = System.currentTimeMillis();
     System.out.println("bw " + width + " " + (t1 - t0) + " millisecs");
-//    System.out.println("bd.width " + branchDec.width());
+    System.out.println("bd.width " + branchDec.width());
     if (outPath != null) {
       branchDec.validate();
+      assert width == branchDec.width();
       File outFile = new File(outPath);
       PrintStream ps;
       try {

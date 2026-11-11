@@ -1128,7 +1128,7 @@ public class BlockDP0 {
       }
       if (mt1[2].intersectWith(mt1[0]).cardinality() + s == 2 * k) {
         mt1[1] = separator.subtract(mt1[2].intersectWith(mt1[0]));
-        XBitSet rem = mt1[2].subtract(mt1[1]).subtract(mt1[0]);
+        XBitSet rem = mt1[1].subtract(mt1[2]).subtract(mt1[0]);
         int d2 = k - mt1[2].cardinality();
         assert d2 <= rem.cardinality();
         XBitSet rem2 = new XBitSet(Arrays.copyOf(rem.toArray(), d2));
